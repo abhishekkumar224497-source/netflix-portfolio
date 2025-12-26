@@ -9,6 +9,15 @@
   justify-content: space-between;
   padding: 0 40px;
   z-index: 1000;
+  transition: transform 0.4s ease;
+}
+
+.navbar.hide {
+  transform: translateY(-100%);
+}
+
+.navbar.show {
+  transform: translateY(0);
 }
 
 .logo {
@@ -27,12 +36,18 @@
 .nav-link {
   color: #e5e5e5;
   font-size: 14px;
-  cursor: pointer;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-link:hover {
   color: #b3b3b3;
+}
+
+/* Active link (Netflix highlight) */
+.nav-link.active {
+  color: #ffffff;
+  font-weight: 600;
 }
 
 /* Dropdown */
@@ -48,6 +63,12 @@
   background: #141414;
   padding: 10px;
   border-radius: 4px;
+  min-width: 160px;
+}
+
+.dropdown-menu.right {
+  right: 0;
+  left: auto;
 }
 
 .dropdown-menu a {
@@ -66,7 +87,9 @@
   display: block;
 }
 
+/* Profile */
 .profile {
   color: #e5e5e5;
   font-size: 14px;
+  cursor: pointer;
 }
